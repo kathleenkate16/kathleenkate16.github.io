@@ -170,6 +170,7 @@ html{
   
   .home .content h3 span {
     color: var(--orange);
+    font-weight: bold;
   }
   
   .home .content p {
