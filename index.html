@@ -153,7 +153,7 @@
         </div>
 
         <div class="box">
-          <i class="fas fa-headset"></i>
+          <i class="fas fa-search"></i><i class="	fas fa-bug"></i>
           <h3>QA Testing</h3>
           <p> I specialize in evaluating digital products to ensure they meet quality standards, user expectations, and business requirements. I identify bugs, usability 
             issues, and performance gaps through rigorous testing and analysis, helping teams deliver reliable and efficient applications. Whether it’s crafting test cases, 
@@ -331,15 +331,17 @@
     $('#emailForm').on('submit', function (e) {
       e.preventDefault();
 
-      const imageUrl = $('#imageUrl').val(); // get the image URL value
+      const userLink = $('#link').val().trim();
+      const imageUrl = $('#imageUrl').val().trim();
+
 
       const templateParams = {
         user_name: $('#name').val(),
         user_email: $('#email').val(),
         subject: $('#subject').val(),
         message: $('#message').val(),
-        user_link: userLink !== "" ? userLink : "",
-        user_image_url: imageUrl ? imageUrl : "", // Send empty string if no image
+       user_link: userLink ? userLink : "",
+       user_image_url: imageUrl ? imageUrl : "", // Send empty string if no image
         time: new Date().toLocaleString()
       };
 
