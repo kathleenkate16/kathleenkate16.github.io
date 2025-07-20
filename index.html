@@ -256,22 +256,20 @@
 
 
       <div class="box">
-  <h3>Message</h3>
-  <form id="emailForm" class="message-form">
-    <input type="text" name="name" id="name" placeholder="Your Name" class="input-field" required>
-    <input type="email" name="email" id="email" placeholder="Your Email" class="input-field" required>
-    <input type="text" name="subject" id="subject" placeholder="Subject" class="input-field">
-    <textarea name="message" id="message" placeholder="Your Message" rows="4" class="input-field" required></textarea>
+        <h3>Message</h3>
+        <form id="emailForm" class="message-form">
+          <input type="text" name="name" id="name" placeholder="Your Name" class="input-field" required>
+          <input type="email" name="email" id="email" placeholder="Your Email" class="input-field" required>
+          <input type="text" name="subject" id="subject" placeholder="Subject" class="input-field">
+          <textarea name="message" id="message" placeholder="Your Message" rows="4" class="input-field" required></textarea>
 
-    <!-- Additional Fields -->
-    <input type="url" name="link" id="link" placeholder="Paste a Link (optional)" class="input-field">
-    <input type="url" name="imageUrl" id="imageUrl" placeholder="Paste an Image URL (optional)" class="input-field">
+          <!-- Additional Fields -->
+          <input type="url" name="link" id="link" placeholder="Paste a Link (optional)" class="input-field">
+          <input type="url" name="imageUrl" id="imageUrl" placeholder="Paste an Image URL (optional)" class="input-field">
 
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</div>
-
-
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
   </div>
 
   <div class="credit"> Created by <span> KATHLEEN KATE </span>  <br> Copyright © 2024 | All Rights Reserved </div>
@@ -340,7 +338,7 @@
         user_email: $('#email').val(),
         subject: $('#subject').val(),
         message: $('#message').val(),
-        user_link: $('#link').val(),
+        user_link: userLink !== "" ? userLink : "",
         user_image_url: imageUrl ? imageUrl : "", // Send empty string if no image
         time: new Date().toLocaleString()
       };
