@@ -402,6 +402,10 @@ div.desc {
     gap:1.5rem;
     padding:2rem;
 }
+.box-container {
+  display: grid;
+  gap: 1.5rem;
+}
 
 .footer .box-container .box h3{
     font-size: 2.5rem;
@@ -542,7 +546,19 @@ div.desc {
     }
     
 }
+/* Mobile: stack vertically */
+@media (max-width: 600px) {
+  .box-container {
+    grid-template-columns: 1fr;
+  }
+}
 
+/* Tablet: two columns */
+@media (min-width: 601px) and (max-width: 991px) {
+  .box-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 
 
@@ -698,12 +714,12 @@ div.desc {
     }
 
     .project-overlay-details h5 {
-        font-size: 1rem;
+        font-size: 2rem;
         margin: 0.5rem 0;  
     }
 
     .project-overlay-details span {
-        font-size: 1rem;
+        font-size: 2rem;
         margin: 0.5rem 0;
     }
     .footer {
