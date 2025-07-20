@@ -544,6 +544,8 @@ div.desc {
         margin: 2rem 0;
         text-align: center;
     }
+
+    
     
 }
 /* Mobile: stack vertically */
@@ -602,28 +604,39 @@ div.desc {
     }
 
     .home {
-        padding-top: 10rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .home .content {
-        width: 100%;
-        text-align: center;
-    }
+.home .image {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  margin-bottom: 2rem;
+}
 
-    .home .content h3 {
-        font-size: 2.5rem;
-    }
+.home .image img {
+  width: 100%;
+  height: auto;
+  border-radius:0%; /* optional: makes it a circle if it's a headshot */
+  object-fit: cover;
+}
 
-    .home .content p {
-        font-size: 1.5rem;
-    }
-    .image {
-        display: none;
-    }
+.home .content {
+  width: 100%;
+  text-align: center;
+}
+
+.home .content h3 {
+  font-size: 2.5rem;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+}
+
 
     .about .content {
         width: 100%;
