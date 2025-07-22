@@ -27,7 +27,7 @@ html{
     scroll-padding-top: 7rem;
 }
 
-
+/*================ HEADING =================*/
 .heading{
     text-align: center;
     padding-top: 10rem;
@@ -44,6 +44,7 @@ html{
     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
 
+/*================ BUTTON =================*/
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -131,6 +132,7 @@ html{
     display: none;
 }
 
+/*================ HOME =================*/
 .home {
     display: flex;
     align-items: center;
@@ -179,7 +181,8 @@ html{
     padding: 1rem 0;
     line-height: 1.8;
   }
-  
+
+/*================ ABOUT =================*/
 .about{
     display: flex;
     align-items: center;
@@ -227,6 +230,7 @@ html{
     display: block;
 }
 
+/*================ SKILLS =================*/
 .skills .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -301,13 +305,13 @@ div.desc {
     color: peachpuff;
 }
 
+/*================ SERVICES =================*/
 .services .box-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
     gap:1.5rem;
     padding:2rem;
 }
-
 .services .box-container .box{
     padding:3rem 2rem;
     background: sienna;
@@ -316,7 +320,6 @@ div.desc {
     text-align: center;
     box-shadow: var(--box-shadow);
 }
-
 .services .box-container .box i {
     font-size: 5rem;
     color: var(--icon-color);
@@ -326,13 +329,13 @@ div.desc {
     line-height: 1.8;
     color:var(--black);
 }
-
 .services .box-container .box p{
     font-size: 1.5rem;
     line-height: 1.8;
     color:var(--light-color);
 }
 
+/*================ PROJECTS =================*/
 .projects .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columns on wide screens */
@@ -390,6 +393,7 @@ div.desc {
   font-size: 1.5rem;
 }
 
+/*================ FOOTER =================*/
 .footer{
     background: black;
     padding-top: 8rem;
@@ -498,7 +502,7 @@ div.desc {
     color: darkred;
 }
 
-/* media queries  */
+/*================ MEDIA QUERIE =================*/
 
 @media (max-width:991px){
 
@@ -547,19 +551,6 @@ div.desc {
 
     
     
-}
-/* Mobile: stack vertically */
-@media (max-width: 600px) {
-  .box-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Tablet: two columns */
-@media (min-width: 601px) and (max-width: 991px) {
-  .box-container {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 
