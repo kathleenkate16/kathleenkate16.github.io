@@ -214,6 +214,7 @@ html{
     line-height: 1.8;
     margin-right: 40px;
     margin-left: 80px;
+    text-align: justify;
 }
 .profile-image {
     width: 300px;
@@ -245,7 +246,7 @@ html{
     background: sienna;
     outline: var(--outline);
     outline-offset: -1rem;
-    text-align: center;
+    text-align: justify;
     box-shadow: var(--box-shadow);
     height: auto;
     border-radius: 5px;
@@ -329,10 +330,11 @@ div.desc {
     line-height: 1.8;
     color:var(--black);
 }
-.services .box-container .box p{
+.services .box-container .box li{
     font-size: 1.5rem;
     line-height: 1.8;
     color:var(--light-color);
+    text-align: justify;
 }
 
 /*================ PROJECTS =================*/
@@ -711,7 +713,7 @@ div.desc {
     }
 
     .services .box-container .box i {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     .services .box-container .box h3 {
@@ -719,7 +721,7 @@ div.desc {
     }
 
     .services .box-container .box p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .projects .box-container {
