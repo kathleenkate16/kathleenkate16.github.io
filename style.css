@@ -502,6 +502,7 @@ div.desc {
 
 .footer .credit span{
     color: darkred;
+    font-weight: bold;
 }
 
 /*================ MEDIA QUERIE =================*/
