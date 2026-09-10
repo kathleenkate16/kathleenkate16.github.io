@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
-:root{
-    --orange:sienna;
-    --black: cornsilk;
-    --light-color:bisque;
+:root {
+  --logo-cyan: #42D9FF;
+  --logo-blue: #5BA8FF;
+  --logo-indigo: #6968FF;
+  --logo-purple: #994CFF;
+
+  --logo-gradient: linear-gradient(
+    135deg,
+    #42D9FF 0%,
+    #5BA8FF 35%,
+    #6968FF 65%,
+    #994CFF 100%
+  );
 }
 
 *{
