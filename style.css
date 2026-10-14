@@ -69,3 +69,24 @@
   background: white;
   border-radius: 2px;
 }
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2f72 40%, #0f1e4d 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.hero-image-ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255,255,255,0.2);
+  animation: spinSlow 20s linear infinite;
+}
