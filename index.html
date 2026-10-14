@@ -29,23 +29,23 @@
             </a>
 
             <ul class="nav-links" id="nav-links" role="list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certification">Certs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active" aria-label="Home">Home</a></li>
+                <li><a href="#about" class="nav-link" aria-label="About">About</a></li>
+                <li><a href="#skills" class="nav-link" aria-label="Skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" aria-label="Experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" aria-label="Projects">Projects</a></li>
+                <li><a href="#education" class="nav-link" aria-label="Education">Education</a></li>
+                <li><a href="#certification" class="nav-link" aria-label="Certification">Certs</a></li>
+                <li><a href="#contact" class="nav-link" aria-label="Contact">Contact</a></li>
             </ul>
 
-            <div>
-                <button>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
                     <i class="fas fa-moon" id="theme-icon"></i>
                 </button>
-                <a href="#">Hire Me</a>
-                <button>
-                <span></span><span></span><span></span>
+                <a href="#contact" class="btn btn-sm btn-primary nav-hire-btn">Hire Me</a>
+                <button id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
