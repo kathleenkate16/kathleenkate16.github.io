@@ -90,3 +90,26 @@
   border: 2px dashed rgba(255,255,255,0.2);
   animation: spinSlow 20s linear infinite;
 }
+
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-badge {
+  position: absolute;
+  bottom: 0; right: -10px;
+  background: white;
+  color: var(--gray-800);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+}
+.badge-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  animation: pulse-dot 2s ease infinite;
+}
