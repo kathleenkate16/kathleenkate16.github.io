@@ -242,6 +242,7 @@
             </div>
         </div>
     </section>
+
     <section id="skills" class="section section-alt" aria-label="Skills">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -333,5 +334,66 @@
             </div>
         </div>
     </section>
+
+    <section id="projects" class="section section-alt" aria-label="Projects portfolio">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
+        <p class="section-subtitle">A selection of projects that demonstrate my skills and problem-solving approach</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters" data-aos="fade-up" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Apps</button>
+        <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">Backend</button>
+        <button class="filter-btn" data-filter="dashboard" role="tab" aria-selected="false">Dashboard</button>
+        <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI / ML</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+
+        <article class="project-card" data-category="ai backend" data-aos="fade-up" data-aos-delay="0" aria-label="Medical Chatbot System project">
+          <div class="project-image">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);">
+              <i class="fas fa-robot" aria-hidden="true"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn" aria-label="View GitHub repository for Medical Chatbot">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="project-link-btn" aria-label="View live demo of Medical Chatbot">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+              </a>
+            </div>
+            <span class="project-category-tag">AI / Backend</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Medical Chatbot System</h3>
+            <p class="project-desc">
+              AI-powered chatbot for healthcare assistance with real-time symptom analysis,
+              appointment scheduling, and patient FAQ handling via natural language processing.
+            </p>
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> PHP backend with NLP integration</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Real-time WebSocket messaging</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> MySQL patient data management</li>
+            </ul>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>WebSocket</span><span>NLP API</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center" data-aos="fade-up">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+          <i class="fab fa-github" aria-hidden="true"></i> View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
