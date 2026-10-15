@@ -320,3 +320,28 @@
   gap: 0.6rem;
   font-size: 0.87rem;
 }
+
+.certs-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cert-card {
+  overflow: hidden;
+}
+.cert-image {
+  height: 130px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+}
+.cert-body { padding: 1.25rem; }
+.cert-issuer i { margin-right: 0.25rem; }
+.cert-verify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cert-verify-btn i { font-size: 0.7rem; }
