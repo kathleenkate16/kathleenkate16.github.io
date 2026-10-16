@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTop = document.getElementById('back-to-top');
     const themeToggle = document.getElementById('theme-toggle');
 
+    // AOS is optional. If its CDN is unavailable, keep every section visible.
+    if (window.AOS) {
+        AOS.init({ once: true, duration: 700, offset: 70 });
+    } else {
+            document.querySelectorAll('[data-aos]').forEach(el => {
+            el.removeAttribute('data-aos');
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+        });
+    }
+
     const onScroll = () => {
         const y = window.scrollY;
         navbar?.classList.toggle('scrolled', y > 40);
