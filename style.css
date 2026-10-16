@@ -787,7 +787,7 @@ input, textarea, select { font-family: var(--font-sans); }
     position: absolute;
     left: 0;
     color: var(--accent);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .exp-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; }
