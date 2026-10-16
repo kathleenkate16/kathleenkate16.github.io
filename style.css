@@ -275,6 +275,7 @@ input, textarea, select { font-family: var(--font-sans); }
 
 /* ─── SECTION BASE ───────────────────────────────────────────── */
 .section { padding: var(--section-py) 0; }
+.section-alt { background: var(--bg-alt); }
 
 .section-header {
     text-align: center;
@@ -284,6 +285,9 @@ input, textarea, select { font-family: var(--font-sans); }
     display: inline-block;
     background: rgba(59,130,246,0.1);
     color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
     padding: 0.35rem 1rem;
     border-radius: 2rem;
@@ -291,13 +295,17 @@ input, textarea, select { font-family: var(--font-sans); }
     border: 1px solid rgba(59,130,246,0.2);
 }
 .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
     font-weight: 800;
     color: var(--text);
     line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.75rem;
 }
 .text-accent { color: var(--accent); }
 .section-subtitle {
     font-size: 1rem;
+    color: var(--text-muted);
     max-width: 580px;
     margin: 0 auto;
 }
