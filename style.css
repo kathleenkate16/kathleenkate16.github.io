@@ -108,6 +108,58 @@ input, textarea, select { font-family: var(--font-sans); }
     border-radius: 0 2px 2px 0;
 }
 
+/* ─── CONTAINER & LAYOUT ─────────────────────────────────────── */
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.text-center { text-align: center; }
+
+/* ─── BUTTONS ────────────────────────────────────────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+.btn-primary {
+    background: var(--purple);
+    color: white;
+    border-color: var(--purple);
+}
+.btn-primary:hover {
+    background: var(--purple-dark);
+    border-color: var(--purple-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30,58,138,0.35);
+}
+.btn-outline {
+    background: transparent;
+    color: var(--purple);
+    border-color: var(--purple);
+}
+.btn-outline:hover {
+    background: var(--purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30,58,138,0.25);
+}
+[data-theme="dark"] .btn-outline { color: var(--accent-light); border-color: var(--accent-light); }
+[data-theme="dark"] .btn-outline:hover { background: var(--accent); border-color: var(--accent); color: white; }
+.btn-sm { padding: 0.45rem 1rem; font-size: 0.85rem; }
+.btn-lg { padding: 0.9rem 2.25rem; font-size: 1rem; }
+.btn-block { width: 100%; justify-content: center; }
+
 #navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
