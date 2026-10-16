@@ -81,6 +81,9 @@ html {
 }
 
 body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.7;
     transition: background var(--transition-slow), color var(--transition-slow);
     overflow-x: hidden;
