@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('back-to-top');
+    const themeToggle = document.getElementById('theme-toggle');
 
     const onScroll = () => {
         const y = window.scrollY;
@@ -17,5 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
         });
     };
+
+    setTheme(savedTheme || preferredTheme);
+    themeToggle?.addEventListener('click', () => {
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        try { localStorage.setItem('portfolio-theme', next); } catch (_) {}
+    });
 
 })
