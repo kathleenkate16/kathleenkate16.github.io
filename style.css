@@ -273,6 +273,35 @@ input, textarea, select { font-family: var(--font-sans); }
 #hamburger.active span:nth-child(2) { opacity: 0; }
 #hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* ─── SECTION BASE ───────────────────────────────────────────── */
+.section { padding: var(--section-py) 0; }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+.section-tag {
+    display: inline-block;
+    background: rgba(59,130,246,0.1);
+    color: var(--accent);
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 0.85rem;
+    border: 1px solid rgba(59,130,246,0.2);
+}
+.section-title {
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+}
+.text-accent { color: var(--accent); }
+.section-subtitle {
+    font-size: 1rem;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
 /* Hero Content */
 .hero-content { flex: 1; min-width: 0; }
 .hero-greeting {
