@@ -310,6 +310,80 @@ input, textarea, select { font-family: var(--font-sans); }
     margin: 0 auto;
 }
 
+/* ─── HERO SECTION ───────────────────────────────────────────── */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--purple) 0%, #1a2f72 40%, #0f1e4d 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated background shapes */
+.hero-bg-shapes { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.07;
+    animation: floatShape 8s ease-in-out infinite alternate;
+}
+.shape-1 { width: 600px; height: 600px; background: var(--accent); top: -200px; right: -150px; animation-delay: 0s; }
+.shape-2 { width: 400px; height: 400px; background: var(--accent-light); bottom: -100px; left: -100px; animation-delay: 2s; }
+.shape-3 { width: 200px; height: 200px; background: white; top: 60%; left: 40%; animation-delay: 1s; }
+.shape-4 { width: 150px; height: 150px; background: var(--accent); top: 20%; left: 20%; animation-delay: 3s; }
+@keyframes floatShape {
+    0%   { transform: translate(0,0) scale(1); }
+    100% { transform: translate(30px, -30px) scale(1.05); }
+}
+
+/* Grid dot pattern overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+}
+
+.hero-container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: calc(var(--nav-h) + 2rem) 1.5rem 4rem;
+    width: 100%;
+}
+
+/* Hero Image */
+.hero-image-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+.hero-image-ring {
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255,255,255,0.2);
+    animation: spinSlow 20s linear infinite;
+}
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+.hero-image {
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-badge {
+    position: absolute;
+    bottom: 0; right: -10px;
+    background: white;
+    padding: 0.4rem 0.85rem;
+    border-radius: 2rem;
+}
+.badge-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #22C55E;
+    animation: pulse-dot 2s ease infinite;
+}
+
 /* Hero Content */
 .hero-content { flex: 1; min-width: 0; }
 .hero-greeting {
