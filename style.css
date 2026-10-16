@@ -619,7 +619,7 @@ input, textarea, select { font-family: var(--font-sans); }
 .tl-content strong { display: block; font-size: 0.95rem; color: var(--text); margin-top: 0.1rem; }
 .tl-content p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem; }
 
-
+/* ─── SKILLS SECTION ─────────────────────────────────────────── */
 .skills-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -635,7 +635,9 @@ input, textarea, select { font-family: var(--font-sans); }
     color: var(--text);
     margin-bottom: 1.25rem;
 }
+.skills-category-title i { color: var(--accent); }
 
+.skill-bar-item { margin-bottom: 1.25rem; }
 .skill-bar-header {
     display: flex;
     justify-content: space-between;
@@ -645,18 +647,29 @@ input, textarea, select { font-family: var(--font-sans); }
     font-weight: 600;
     color: var(--text);
 }
+.skill-bar-header i { margin-right: 0.35rem; color: var(--accent); }
+.skill-percent { color: var(--accent); font-size: 0.8rem; }
 .skill-bar-track {
     height: 8px;
+    background: var(--bg-alt);
     border-radius: 4px;
     overflow: hidden;
+    border: 1px solid var(--border);
 }
 .skill-bar-fill {
     height: 100%;
+    background: linear-gradient(90deg, var(--purple), var(--accent));
     border-radius: 4px;
     width: 0%;
     transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
+[data-theme="dark"] .skill-bar-fill {
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
 
+/* Badges */
+.skills-badges-wrap { display: flex; flex-direction: column; gap: 1.5rem; }
+/* .badge-category {} */
 .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .badge {
     display: inline-flex;
@@ -666,7 +679,37 @@ input, textarea, select { font-family: var(--font-sans); }
     font-size: 0.8rem;
     font-weight: 600;
     border: 1.5px solid transparent;
+    transition: all var(--transition);
 }
+.badge:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+/* Badge color variants */
+.badge-html     { background:#FEF3C7; color:#92400E; border-color:#FDE68A; }
+.badge-css      { background:#EFF6FF; color:#1D4ED8; border-color:#BFDBFE; }
+.badge-bootstrap{ background:#F5F3FF; color:#6D28D9; border-color:#DDD6FE; }
+.badge-tailwind { background:#ECFDF5; color:#065F46; border-color:#A7F3D0; }
+.badge-react    { background:#EFF6FF; color:#1D4ED8; border-color:#93C5FD; }
+.badge-laravel  { background:#FFF1F2; color:#BE123C; border-color:#FECDD3; }
+.badge-node     { background:#F0FDF4; color:#166534; border-color:#BBF7D0; }
+.badge-express  { background:#F1F5F9; color:#334155; border-color:#CBD5E1; }
+.badge-api      { background:#FFF7ED; color:#C2410C; border-color:#FED7AA; }
+.badge-mysql    { background:#EFF6FF; color:#1E40AF; border-color:#BFDBFE; }
+.badge-postgres { background:#F0F9FF; color:#0369A1; border-color:#BAE6FD; }
+.badge-mongo    { background:#F0FDF4; color:#15803D; border-color:#BBF7D0; }
+.badge-git      { background:#FFF1F2; color:#9F1239; border-color:#FECDD3; }
+.badge-github   { background:#F1F5F9; color:#0F172A; border-color:#CBD5E1; }
+.badge-vscode   { background:#EFF6FF; color:#1D4ED8; border-color:#BFDBFE; }
+.badge-docker   { background:#EFF6FF; color:#1D4ED8; border-color:#93C5FD; }
+.badge-linux    { background:#FFFBEB; color:#92400E; border-color:#FDE68A; }
+.badge-windows  { background:#EFF6FF; color:#1E40AF; border-color:#BFDBFE; }
+
+/* Dark mode badge adjustments */
+[data-theme="dark"] .badge {
+    background: rgba(59,130,246,0.08) !important;
+    color: var(--accent-light) !important;
+    border-color: rgba(59,130,246,0.25) !important;
+}
+[data-theme="dark"] .badge:hover { background: rgba(59,130,246,0.18) !important; }
 
 .experience-grid {
     display: grid;
