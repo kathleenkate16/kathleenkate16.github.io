@@ -507,6 +507,95 @@ input, textarea, select { font-family: var(--font-sans); }
     100% { transform: translateY(10px); opacity: 0; }
 }
 
+/* ─── ABOUT SECTION ──────────────────────────────────────────── */
+.about-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+}
+
+.about-image-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+.about-image-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.about-image-overlay {
+    padding: 0.75rem 1rem;
+    background: rgba(30,58,138,0.88);
+    backdrop-filter: blur(4px);
+    color: white;
+    font-size: 0.85rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.info-item:last-child { border-bottom: none; }
+.info-item > i {
+    width: 30px; height: 30px;
+    border-radius: 0.4rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+.about-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.about-text { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 0.97rem; }
+
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 0;
+}
+.strength-item {
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    transition: all var(--transition);
+}
+.strength-item:hover { 
+    border-color: 
+    var(--accent); 
+    background: rgba(59,130,246,0.05); 
+    transform: translateY(-2px); 
+}
+.strength-item i { 
+    color: var(--accent); 
+    font-size: 1rem; }
+
+.timeline-heading { 
+    font-size: 1rem; 
+    font-weight: 700; 
+    color: var(--text); 
+    margin-bottom: 1rem; 
+    margin-top: 0.5rem; 
+}
+
+.about-timeline { position: relative; }
+.about-timeline::before {
+    width: 2px;
+}
+.timeline-item { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; }
+.tl-dot {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+}
+.tl-content { 
+    flex: 1;
+}
+
 .skills-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
