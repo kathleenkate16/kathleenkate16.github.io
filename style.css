@@ -1227,9 +1227,19 @@ a.contact-value:hover { color: var(--accent); }
     position: fixed;
     bottom: 2rem;
     right: 2rem;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--purple);
     color: white;
     border: 2px solid rgba(255,255,255,0.1);
     display: flex; align-items: center; justify-content: center;
     font-size: 0.95rem;
     cursor: pointer;
+    z-index: 500;
+    opacity: 0; visibility: hidden;
+    transform: translateY(20px);
+    transition: all var(--transition);
+    box-shadow: 0 4px 15px rgba(30,58,138,0.4);
 }
+#back-to-top:hover { background: var(--accent); transform: translateY(-3px); }
+#back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
