@@ -438,7 +438,14 @@ input, textarea, select { font-family: var(--font-sans); }
     animation: blink 1s step-end infinite;
     font-weight: 300;
 }
+
 .hero-summary strong { color: rgba(255,255,255,0.95); }
+
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.hero-cta .btn-primary { background: var(--accent); border-color: var(--accent); }
+.hero-cta .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); box-shadow: 0 8px 25px rgba(59,130,246,0.4); }
+.hero-cta .btn-outline { color: white; border-color: rgba(255,255,255,0.4); }
+.hero-cta .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; color: white; }
 
 .hero-socials { display: flex; gap: 0.75rem; }
 .social-icon {
@@ -449,7 +456,40 @@ input, textarea, select { font-family: var(--font-sans); }
     display: flex; align-items: center; justify-content: center;
     color: rgba(255,255,255,0.8);
     font-size: 1rem;
+    transition: all;
     text-decoration: none;
+}
+.social-icon:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(59,130,246,0.4);
+}
+
+/* Scroll hint */
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.hero-scroll-hint:hover { color: rgba(255,255,255,0.9); }
+
+.scroll-mouse {
+    width: 20px; height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.544);
+    border-radius: 11px;
+    padding-top: 5px;
+}
+.scroll-wheel {
+    width: 3px; height: 6px;
+    background: rgba(255, 255, 255, 0.777);
+    border-radius: 2px;
+    animation: scrollWheel 2s ease infinite;
 }
 
 .skills-layout {
