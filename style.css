@@ -1243,3 +1243,15 @@ a.contact-value:hover { color: var(--accent); }
 }
 #back-to-top:hover { background: var(--accent); transform: translateY(-3px); }
 #back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+
+
+/* ─── PRINT STYLES ───────────────────────────────────────────── */
+@media print {
+    #navbar, #loader, #scroll-progress, #back-to-top,
+    .hero-bg-shapes, .hero-scroll-hint, .hero-image-ring,
+    .project-overlay, .filter-btn { display: none !important; }
+    body { color: #000; background: white; }
+    .section { page-break-inside: avoid; }
+    a { color: #000; text-decoration: underline; }
+    .hero { background: #1E3A8A !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
