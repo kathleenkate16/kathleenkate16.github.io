@@ -456,14 +456,14 @@ input, textarea, select { font-family: var(--font-sans); }
     display: flex; align-items: center; justify-content: center;
     color: rgba(255,255,255,0.8);
     font-size: 1rem;
-    transition: all;
+    transition: all var(--transition);
     text-decoration: none;
 }
 .social-icon:hover {
     background: var(--accent);
     border-color: var(--accent);
     color: white;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(59,130,246,0.4);
 }
 
@@ -472,24 +472,39 @@ input, textarea, select { font-family: var(--font-sans); }
     position: absolute;
     bottom: 2rem;
     left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
     color: rgba(255,255,255,0.5);
     font-size: 0.75rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    text-decoration: none;
+    z-index: 1;
+    transition: color var(--transition);
+    animation: bounceScroll 2.5s ease infinite;
 }
 .hero-scroll-hint:hover { color: rgba(255,255,255,0.9); }
 
 .scroll-mouse {
-    width: 20px; height: 34px;
-    border: 2px solid rgba(255, 255, 255, 0.544);
+    width: 22px; height: 34px;
+    border: 2px solid rgba(255,255,255,0.3);
     border-radius: 11px;
+    display: flex;
+    justify-content: center;
     padding-top: 5px;
 }
 .scroll-wheel {
     width: 3px; height: 6px;
-    background: rgba(255, 255, 255, 0.777);
+    background: rgba(255,255,255,0.5);
     border-radius: 2px;
     animation: scrollWheel 2s ease infinite;
+}
+@keyframes scrollWheel {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(10px); opacity: 0; }
 }
 
 .skills-layout {
