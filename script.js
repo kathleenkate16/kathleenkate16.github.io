@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let savedTheme = null;
     try { savedTheme = localStorage.getItem('portfolio-theme'); } catch (_) {}
     const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
+    const setTheme = theme => {
+        root.dataset.theme = theme;
+        if (themeIcon) themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    };
     const onScroll = () => {
         const y = window.scrollY;
         navbar?.classList.toggle('scrolled', y > 40);
