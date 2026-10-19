@@ -1,69 +1,82 @@
 /* ─── CSS CUSTOM PROPERTIES ─────────────────────────────────── */
 :root {
     /* Brand Colors */
-    --purple:      #5B21B6;
-    --purple-dark: #4C1D95;
-    --purple-light:#6D28D9;
-    --accent:      #8B5CF6;
-    --accent-dark: #7C3AED;
-    --accent-light:#A78BFA;
-    --white:       #FFFFFF;
-    --gray-50:     #F9FAFB;
-    --gray-100:    #F3F4F6;
-    --gray-200:    #E5E7EB;
-    --gray-300:    #D1D5DB;
-    --gray-400:    #9CA3AF;
-    --gray-500:    #6B7280;
-    --gray-600:    #4B5563;
-    --gray-700:    #374151;
-    --gray-800:    #1F2937;
-    --gray-900:    #111827;
+    --purple:       #756AB6;
+    --purple-dark:  #5C509C;
+    --purple-light: #968BD0;
+    --accent:       #8C70C6;
+    --accent-dark:  #7054A9;
+    --accent-light: #DCCCF5;
 
-    /* Semantic Tokens (light mode) */
-    --bg:          var(--white);
-    --bg-alt:      var(--gray-100);
-    --bg-card:     var(--white);
-    --text:        var(--gray-800);
-    --text-muted:  var(--gray-500);
-    --text-light:  var(--gray-400);
-    --border:      var(--gray-200);
-    --shadow-sm:   0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-    --shadow:      0 4px 16px rgba(0,0,0,0.08);
-    --shadow-lg:   0 10px 40px rgba(0,0,0,0.12);
-    --shadow-xl:   0 20px 60px rgba(0,0,0,0.15);
+    /* Neutral Colors */
+    --white:        #FFFFFF;
+    --gray-50:      #FAF9FD;
+    --gray-100:     #F2EDFA;
+    --gray-200:     #E5DCF2;
+    --gray-300:     #D4C9E5;
+    --gray-400:     #AAA1BD;
+    --gray-500:     #756E88;
+    --gray-600:     #625B76;
+    --gray-700:     #49435F;
+    --gray-800:     #35304E;
+    --gray-900:     #25213E;
+
+    /* Semantic Tokens (Light Mode) */
+    --bg:           var(--white);
+    --bg-alt:       var(--gray-50);
+    --bg-card:      var(--white);
+    --text:         var(--gray-900);
+    --text-muted:   var(--gray-600);
+    --text-light:   var(--gray-500);
+    --border:       var(--gray-200);
+
+    --shadow-sm: 0 1px 3px rgba(37,33,62,0.06),
+                 0 1px 2px rgba(37,33,62,0.04);
+    --shadow:    0 4px 16px rgba(37,33,62,0.08);
+    --shadow-lg: 0 10px 40px rgba(37,33,62,0.12);
+    --shadow-xl: 0 20px 60px rgba(37,33,62,0.15);
 
     /* Typography */
-    --font-sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono:   'JetBrains Mono', 'Fira Code', monospace;
+    --font-sans: 'Inter', -apple-system,
+                 BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
     /* Spacing */
-    --section-py:  5rem;
-    --container:   1200px;
-    --radius:      0.75rem;
-    --radius-lg:   1.25rem;
-    --radius-xl:   2rem;
+    --section-py: 5rem;
+    --container: 1200px;
+    --radius: 0.75rem;
+    --radius-lg: 1.25rem;
+    --radius-xl: 2rem;
 
     /* Transitions */
-    --transition:  0.25s ease;
+    --transition: 0.25s ease;
     --transition-slow: 0.4s ease;
 
-    /* Nav */
-    --nav-h:       72px;
+    /* Navigation */
+    --nav-h: 72px;
 }
 
 /* Dark Mode Tokens */
 [data-theme="dark"] {
-    --bg:         #1A0F2E;
-    --bg-alt:     #2A1B47;
-    --bg-card:    #2A1B47;
-    --text:       #EDE9FE;
-    --text-muted: #A89BC7;
-    --text-light: #7C6C9E;
-    --border:     #43306B;
-    --shadow-sm:  0 1px 3px rgba(0,0,0,0.3);
-    --shadow:     0 4px 16px rgba(0,0,0,0.4);
-    --shadow-lg:  0 10px 40px rgba(0,0,0,0.5);
-    --shadow-xl:  0 20px 60px rgba(0,0,0,0.6);
+    --bg:         #25213E;
+    --bg-alt:     #302B4A;
+    --bg-card:    #393351;
+    --text:       #F6F2FC;
+    --text-muted: #C5BADB;
+    --text-light: #AFA3C9;
+    --border:     #4D4568;
+
+    --purple:       #B7A5EA;
+    --purple-dark:  #9683D0;
+    --purple-light: #DCCCF5;
+    --accent:       #C2ADEB;
+    --accent-dark:  #A48DD6;
+    --accent-light: #E6D9FA;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.25);
+    --shadow:    0 4px 16px rgba(0,0,0,0.30);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,0.40);
+    --shadow-xl: 0 20px 60px rgba(0,0,0,0.50);
 }
 
 /* ─── RESET & BASE ───────────────────────────────────────────── */
@@ -356,7 +369,7 @@ input, textarea, select { font-family: var(--font-sans); }
 /* ─── HERO SECTION ───────────────────────────────────────────── */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--purple) 0%, #3B0764 40%, #3B0764 100%);
+    background: linear-gradient(135deg, #5e0a9e 0%, #3B0764 40%, #3B0764 100%);
     display: flex;
     align-items: center;
     position: relative;
