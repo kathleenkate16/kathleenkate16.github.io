@@ -1499,6 +1499,16 @@ a.contact-value:hover { color: var(--accent); }
     .footer-top-grid { grid-template-columns: 1fr; gap: 2rem; }
     .footer-bottom-inner { flex-direction: column; text-align: center; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+    [data-aos="fade-left"],
+    [data-aos="fade-right"] {
+        transform: translateY(20px);
+    }
+
+    [data-aos="fade-left"].aos-animate,
+    [data-aos="fade-right"].aos-animate {
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 480px) {
