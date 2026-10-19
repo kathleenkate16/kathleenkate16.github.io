@@ -1512,7 +1512,14 @@ a.contact-value:hover { color: var(--accent); }
     .footer-top-grid { grid-template-columns: 1fr; gap: 2rem; }
     .footer-bottom-inner { flex-direction: column; text-align: center; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
-
+    .hero-badge {bottom: -10px; right: 0px;}
+    .hero-scroll-hint {display: none;}
+    .edu-item {align-items: center;}
+    .contact-info {gap: 0rem;}
+    .contact-socials {justify-content: center;}
+    .contact-form .form-row {gap: 0;}
+    .contact-form-wrap {padding: 1rem;}
+    
     [data-aos="fade-left"],
     [data-aos="fade-right"] {
         transform: translateY(20px);
