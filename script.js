@@ -100,3 +100,24 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 });
+
+// Hide the loader after the page finishes loading, with a fallback so it cannot stay stuck.
+document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("loader");
+
+    if (!loader) return;
+
+    const hideLoader = () => {
+        loader.classList.add("hidden");
+    };
+
+    // Hide after the page and its resources finish loading.
+    if (document.readyState === "complete") {
+        hideLoader();
+    } else {
+        window.addEventListener("load", hideLoader, { once: true });
+    }
+
+    // Fallback in case a resource prevents the load event from firing.
+    setTimeout(hideLoader, 5000);
+});

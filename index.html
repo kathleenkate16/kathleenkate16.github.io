@@ -30,10 +30,24 @@
     <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
+
+    <!-- SCROLL PROGRESS INDICATOR -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader" role="status" aria-label="Loading portfolio">
+        <div class="loader-content">
+            <div class="loader-logo">YN</div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+            <p class="loader-text">Loading Portfolio…</p>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
     <nav id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <a href="#home" class="nav-logo" aria-label="Go to home">
-                <span>&lt;</span>KS<span class="logo-bracket">/&gt;</span>
+                <span class="logo-bracket">&lt;</span>KS<span class="logo-bracket">/&gt;</span>
             </a>
 
             <ul class="nav-links" id="nav-links" role="list">
@@ -59,8 +73,9 @@
         </div>
     </nav>
 
-    <section>
-        <div>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero" aria-label="Hero section">
+        <div class="hero-bg-shapes" aria-hidden="true">
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
             <div class="shape shape-3"></div>
@@ -78,6 +93,7 @@
                     <span class="badge-dot"></span> Available for Work
                 </div>
             </div>
+
             <!-- Text Content -->
             <div class="hero-content" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                 <p class="hero-greeting">Hello, I'm</p>
@@ -87,11 +103,11 @@
                     <span class="hero-typed" id="typed-text" aria-live="polite"></span>
                     <span class="hero-cursor" aria-hidden="true">|</span>
                 </div>
-    
+
                 <p class="hero-summary">
                     Passionate UI/UX designer and web developer skilled in creating,<strong> visually appealing, and user-friendly</strong> digital experiences. Dedicated to building functional websites, developing interactive applications, and creating engaging visuals using Canva.
                 </p>
-    
+
                 <!-- CTA Buttons -->
                 <div class="hero-cta">
                     <a href="resume.pdf" download class="btn btn-primary" aria-label="Download resume PDF">
@@ -101,7 +117,7 @@
                         <i class="fas fa-paper-plane" aria-hidden="true"></i> Contact Me
                     </a>
                 </div>
-    
+
                 <!-- Social Links -->
                 <div class="hero-socials" role="list" aria-label="Social media links">
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer" role="listitem" class="social-icon" aria-label="GitHub profile">
@@ -118,15 +134,15 @@
                     </a>
                 </div>
             </div>
-            </div>
-    
-            <a href="#about" class="hero-scroll-hint" aria-label="Scroll down to about section">
-                <span>Scroll Down</span>
-                <div class="scroll-mouse" aria-hidden="true"><div class="scroll-wheel"></div></div>
-            </a>
         </div>
+
+        <a href="#about" class="hero-scroll-hint" aria-label="Scroll down to about section">
+            <span>Scroll Down</span>
+            <div class="scroll-mouse" aria-hidden="true"><div class="scroll-wheel"></div></div>
+        </a>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section id="about" class="section" aria-label="About me">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -181,7 +197,6 @@
                         in using tools such as Figma, Canva, PHP, JavaScript, and MySQL to
                         create practical and engaging digital solutions.
                     </p>
-
                     <p class="about-text">
                         My goal is to combine creativity, technical knowledge, and
                         analytical thinking to deliver meaningful digital experiences.
@@ -251,6 +266,7 @@
         </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section id="skills" class="section section-alt" aria-label="Skills">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -307,6 +323,7 @@
         </div>
     </section>
     
+    <!-- EXPERIENCE SECTION -->
     <section id="experience" class="section" aria-label="Work experience">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -316,10 +333,11 @@
             </div>
 
             <div class="experience-grid">
+
                 <div class="exp-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="exp-card-header">
                         <div class="exp-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
-                            <div>
+                        <div>
                             <h3 class="exp-title">Full Stack Developer</h3>
                             <p class="exp-company"><i class="fas fa-building" aria-hidden="true"></i> TechCorp Solutions</p>
                         </div>
@@ -343,6 +361,7 @@
         </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section section-alt" aria-label="Projects portfolio">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -403,6 +422,7 @@
         </div>
     </section>
 
+    <!-- EDUCATION SECTION -->
     <section id="education" class="section" aria-label="Education">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -483,6 +503,7 @@
         </div>
     </section>
 
+    <!-- CERTIFICATIONS SECTION -->
     <section id="certifications" class="section section-alt" aria-label="Certifications">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -501,130 +522,132 @@
                         <h3 class="cert-title">Meta Full-Stack Developer</h3>
                         <p class="cert-issuer"><i class="fab fa-meta" aria-hidden="true"></i> Meta (Facebook)</p>
                         <p class="cert-date"><i class="fas fa-calendar" aria-hidden="true"></i> Issued: Nov 2023</p>
-                            <a href="#" class="cert-verify-btn" aria-label="Verify Meta Full-Stack Developer certificate">
-                                Verify <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                            </a>
+                        <a href="#" class="cert-verify-btn" aria-label="Verify Meta Full-Stack Developer certificate">
+                            Verify <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section" aria-label="Contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Let's Talk</span>
+                <h2 class="section-title">Get In <span class="text-accent">Touch</span></h2>
+                <p class="section-subtitle">Have a project in mind? I'd love to hear from you — let's build something great together.</p>
+            </div>
+
+            <div class="contact-layout">
+
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 class="contact-info-title">Contact Information</h3>
+
+                    <div class="contact-info-items">
+                        <div class="contact-info-item">
+                            <div class="contact-icon-wrap"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                            <div>
+                                <span class="contact-label">Email Address</span>
+                                <a href="mailto:hello@yourname.dev" class="contact-value">hello@yourname.dev</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon-wrap"><i class="fas fa-phone" aria-hidden="true"></i></div>
+                            <div>
+                                <span class="contact-label">Phone Number</span>
+                                <a href="tel:+15550000000" class="contact-value">+1 (555) 000-0000</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon-wrap"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Your City, Your Country</span>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon-wrap"><i class="fas fa-clock" aria-hidden="true"></i></div>
+                            <div>
+                                <span class="contact-label">Response Time</span>
+                                <span class="contact-value">Within 24 hours</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Availability Status -->
+                    <div class="contact-availability">
+                        <div class="avail-dot"></div>
+                        <div>
+                            <strong>Currently Available</strong>
+                            <p>Open to full-time roles, freelance projects, and consulting opportunities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="contact-socials">
+                        <a href="https://github.com"    target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://linkedin.com"  target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://facebook.com"  target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:hello@yourname.dev" class="contact-social-btn" aria-label="Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="100">
+                    <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required
+                                              autocomplete="name" aria-required="true" />
+                                <span class="form-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required
+                                              autocomplete="email" aria-required="true" />
+                                <span class="form-error" role="alert"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject <span aria-hidden="true">*</span></label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required
+                                          aria-required="true" />
+                            <span class="form-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="6"
+                                                placeholder="Tell me about your project, timeline, and budget…"
+                                                required aria-required="true"></textarea>
+                            <span class="form-error" role="alert"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                            <span class="submit-text"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message</span>
+                            <span class="submit-loading" style="display:none;"><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending…</span>
+                        </button>
+                        <div id="form-success" class="form-success" role="status" aria-live="polite" style="display:none;">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i> Message sent! I'll respond within 24 hours.
+                        </div>
+                    </form>
+                </div>
 
             </div>
         </div>
     </section>
 
-	<section id="contact" class="section section-alt" aria-label="Contact">
-
-		<div class="container">
-			<div class="section-header" data-aos="fade-up">
-				<span class="section-tag">Let's Talk</span>
-				<h2 class="section-title">Get In <span class="text-accent">Touch</span></h2>
-				<p class="section-subtitle">Have a project in mind? I'd love to hear from you — let's build something great together.</p>
-			</div>
-
-			<div class="contact-layout">
-				<!-- Contact Info -->
-				<div class="contact-info" data-aos="fade-right">
-					<h3 class="contact-info-title">Contact Information</h3>
-
-					<div class="contact-info-items">
-						<div class="contact-info-item">
-							<div class="contact-icon-wrap"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-							<div>
-								<span class="contact-label">Email Address</span>
-								<a href="mailto:hello@yourname.dev" class="contact-value">example@email.com</a>
-							</div>
-						</div>
-						<div class="contact-info-item">
-							<div class="contact-icon-wrap"><i class="fas fa-phone" aria-hidden="true"></i></div>
-							<div>
-								<span class="contact-label">Phone Number</span>
-								<a href="tel:+15550000000" class="contact-value">+63 123 456 7890</a>
-							</div>
-						</div>
-						<div class="contact-info-item">
-							<div class="contact-icon-wrap"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
-							<div>
-								<span class="contact-label">Location</span>
-								<span class="contact-value">Your City, Your Country</span>
-							</div>
-						</div>
-						<div class="contact-info-item">
-							<div class="contact-icon-wrap"><i class="fas fa-clock" aria-hidden="true"></i></div>
-							<div>
-								<span class="contact-label">Response Time</span>
-								<span class="contact-value">Within 24 hours</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Availability Status -->
-					<div class="contact-availability">
-						<div class="avail-dot"></div>
-						<div>
-							<strong>Currently Available</strong>
-							<p>Open to full-time roles, freelance projects, and consulting opportunities.</p>
-						</div>
-					</div>
-
-					<!-- Social Links -->
-					<div class="contact-socials">
-						<a href="https://github.com"    target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="GitHub">
-							<i class="fab fa-github" aria-hidden="true"></i>
-						</a>
-						<a href="https://linkedin.com"  target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="LinkedIn">
-							<i class="fab fa-linkedin-in" aria-hidden="true"></i>
-						</a>
-						<a href="https://facebook.com"  target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Facebook">
-							<i class="fab fa-facebook-f" aria-hidden="true"></i>
-						</a>
-						<a href="mailto:hello@yourname.dev" class="contact-social-btn" aria-label="Email">
-							<i class="fas fa-envelope" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-
-				<!-- Contact Form -->
-				<div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="100">
-					<form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
-						<div class="form-row">
-							<div class="form-group">
-								<label for="name">Full Name <span aria-hidden="true">*</span></label>
-								<input type="text" id="name" name="name" placeholder="John Doe" required
-									autocomplete="name" aria-required="true" />
-								<span class="form-error" role="alert"></span>
-							</div>
-							<div class="form-group">
-								<label for="email">Email Address <span aria-hidden="true">*</span></label>
-								<input type="email" id="email" name="email" placeholder="john@example.com" required
-									autocomplete="email" aria-required="true" />
-								<span class="form-error" role="alert"></span>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="subject">Subject <span aria-hidden="true">*</span></label>
-							<input type="text" id="subject" name="subject" placeholder="Project Inquiry" required
-								aria-required="true" />
-							<span class="form-error" role="alert"></span>
-						</div>
-						<div class="form-group">
-							<label for="message">Message <span aria-hidden="true">*</span></label>
-							<textarea id="message" name="message" rows="6"
-									placeholder="Tell me about your project, timeline, and budget…"
-									required aria-required="true"></textarea>
-							<span class="form-error" role="alert"></span>
-						</div>
-						<button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-							<span class="submit-text"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message</span>
-							<span class="submit-loading" style="display:none;"><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending…</span>
-						</button>
-						<div id="form-success" class="form-success" role="status" aria-live="polite" style="display:none;">
-							<i class="fas fa-check-circle" aria-hidden="true"></i> Message sent! I'll respond within 24 hours.
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-
+    <!-- FOOTER -->
     <footer class="footer" role="contentinfo">
         <div class="footer-top">
             <div class="container footer-top-grid">
@@ -681,6 +704,7 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to top" title="Back to top">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
