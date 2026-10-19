@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('back-to-top');
     const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
 
     // AOS is optional. If its CDN is unavailable, keep every section visible.
     if (window.AOS) {
@@ -21,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         root.dataset.theme = theme;
         if (themeIcon) themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     };
+    setTheme(savedTheme || preferredTheme);
+    themeToggle?.addEventListener('click', () => {
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        try { localStorage.setItem('portfolio-theme', next); } catch (_) {}
+    });
     const onScroll = () => {
         const y = window.scrollY;
         navbar?.classList.toggle('scrolled', y > 40);
