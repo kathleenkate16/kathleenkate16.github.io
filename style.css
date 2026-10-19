@@ -1514,6 +1514,13 @@ a.contact-value:hover { color: var(--accent); }
     .stat-number { font-size: 2rem; }
     .strengths-grid { grid-template-columns: 1fr; }
     #back-to-top { bottom: 1.25rem; right: 1.25rem; }
+    .hero-badge {bottom: -10px; right: 0px;}
+    .hero-scroll-hint {display: none;}
+    .edu-item {align-items: center;}
+    .contact-info {gap: 0rem;}
+    .contact-socials {justify-content: center;}
+    .contact-form .form-row {gap: 0;}
+    .contact-form-wrap {padding: 1rem;}
 }
 
 /* Smooth transitions */
