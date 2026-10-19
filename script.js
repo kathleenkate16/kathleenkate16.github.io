@@ -78,6 +78,31 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     type();
 
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+
+    if ('IntersectionObserver' in window) {
+        const skillObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const width = bar.getAttribute('data-width');
+
+                    bar.style.width = `${width}%`;
+
+                    observer.unobserve(bar);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        skillBars.forEach(bar => skillObserver.observe(bar));
+    } else {
+        skillBars.forEach(bar => {
+            bar.style.width = `${bar.getAttribute('data-width')}%`;
+        });
+    }
+
     const footerYear = document.getElementById('footer-year');
     if (footerYear) footerYear.textContent = new Date().getFullYear();
 
