@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
     const typed = document.getElementById('typed-text');
-    const roles = ['Full-Stack Developer', 'IT Specialist', 'Problem Solver'];
+    const roles = ['Channel Associate', 'Administrative Assistant', 'UI/UX Designer', 'Quality Assurance Tester', 'Project Manager', 'Business Analyst', 'Web Developer'];
     let role = 0, letter = 0, deleting = false;
     const type = () => {
         if (!typed) return;
