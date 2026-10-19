@@ -906,54 +906,141 @@ input, textarea, select { font-family: var(--font-sans); }
 .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); border-color: var(--accent); }
 .project-card.hidden { display: none; }
 
-.project-image { position: relative; overflow: hidden; }
-.project-img-placeholder {
+/* ─── PROJECT IMAGE ─────────────────────────────── */
+.project-image {
+    position: relative;
+    width: 100%;
     height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: rgba(255,255,255,0.7);
+    overflow: hidden;
+    background: var(--purple);
+}
+
+/* All project images have the same dimensions */
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: transform var(--transition-slow);
 }
-.project-card:hover .project-img-placeholder { transform: scale(1.05); }
+
+/* Image zoom effect */
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+/* ─── PURPLE HOVER OVERLAY ──────────────────────── */
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(30,58,138,0.8);
+    background: rgba(76, 29, 149, 0.82);
     backdrop-filter: blur(4px);
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
     opacity: 0;
-    transition: opacity var(--transition);
+    visibility: hidden;
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+
+    z-index: 2;
 }
-.project-card:hover .project-overlay { opacity: 1; }
+
+/* Show overlay on hover or keyboard focus */
+.project-card:hover .project-overlay,
+.project-card:focus-within .project-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ─── WEBSITE & GITHUB ICON BUTTONS ─────────────── */
 .project-link-btn {
-    width: 46px; height: 46px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     background: white;
     color: var(--purple);
-    display: flex; align-items: center; justify-content: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-size: 1rem;
     text-decoration: none;
-    transition: all var(--transition);
+
     transform: translateY(10px);
+    transition: all var(--transition);
 }
-.project-card:hover .project-link-btn { transform: translateY(0); }
-.project-link-btn:hover { background: var(--accent); color: white; transform: scale(1.1); }
+
+.project-card:hover .project-link-btn,
+.project-card:focus-within .project-link-btn {
+    transform: translateY(0);
+}
+
+.project-link-btn:hover,
+.project-link-btn:focus-visible {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ─── PROJECT CATEGORY LABEL ────────────────────── */
 .project-category-tag {
     position: absolute;
-    top: 1rem; left: 1rem;
-    background: rgba(255,255,255,0.15);
+    top: 1rem;
+    left: 1rem;
+
+    background: rgba(76, 29, 149, 0.85);
     color: white;
+
     font-size: 0.72rem;
     font-weight: 700;
     padding: 0.3rem 0.75rem;
     border-radius: 2rem;
+
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(196, 181, 253, 0.35);
+    z-index: 3;
+}
+
+/* ─── MOBILE RESPONSIVENESS ─────────────────────── */
+@media (max-width: 768px) {
+    .project-image {
+        height: 200px;
+    }
+
+    /* Keep links accessible on touchscreens */
+    .project-overlay {
+        opacity: 1;
+        visibility: visible;
+        backdrop-filter: none;
+        background: linear-gradient(
+            to top,
+            rgba(76, 29, 149, 0.65),
+            transparent 70%
+        );
+        align-items: flex-end;
+        padding-bottom: 1rem;
+    }
+
+    .project-link-btn {
+        width: 42px;
+        height: 42px;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-image img,
+    .project-overlay,
+    .project-link-btn {
+        transition: none;
+    }
 }
 
 .project-body { padding: 1.5rem; }
@@ -970,19 +1057,27 @@ input, textarea, select { font-family: var(--font-sans); }
 }
 .project-features li i { color: #22C55E; font-size: 0.75rem; margin-top: 3px; flex-shrink: 0; }
 .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
 .project-tech span {
-    background: rgba(30,58,138,0.08);
+    background: rgba(124, 58, 237, 0.08);
     color: var(--purple);
-    border: 1px solid rgba(30,58,138,0.15);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     font-size: 0.72rem;
     font-weight: 600;
     padding: 0.22rem 0.6rem;
     border-radius: 0.3rem;
 }
+
 [data-theme="dark"] .project-tech span {
-    background: rgba(59,130,246,0.1);
+    background: rgba(167, 139, 250, 0.12);
     color: var(--accent-light);
-    border-color: rgba(59,130,246,0.2);
+    border-color: rgba(167, 139, 250, 0.25);
 }
 
 /* ─── EDUCATION SECTION ──────────────────────────────────────── */
