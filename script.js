@@ -146,3 +146,69 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fallback in case a resource prevents the load event from firing.
     setTimeout(hideLoader, 5000);
 });
+
+/* ── 9. CONTACT FORM ─────────────────────────────────────── */
+const contentinfo = (() => {
+  const SERVICE_ID = 'service_0516';
+  const TEMPLATE_ID = 'template_660ns12';
+
+  function showFeedback(element, type, message) {
+    element.className = `form-feedback ${type}`;
+    element.textContent = message;
+  }
+
+  function init() {
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+    const submitButton = document.getElementById('form-submit');
+
+    if (!form || !feedback || !submitButton) return;
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const buttonText = submitButton.querySelector('.btn-text');
+
+      submitButton.disabled = true;
+      submitButton.style.opacity = '0.7';
+
+      if (buttonText) {
+        buttonText.textContent = 'Sending...';
+      }
+
+      showFeedback(feedback, '', '');
+
+      try {
+        await emailjs.sendForm(
+          SERVICE_ID,
+          TEMPLATE_ID,
+          form
+        );
+
+        form.reset();
+      } catch (error) {
+        console.error('EmailJS error:', error);
+
+        showFeedback(
+          feedback,
+          'error',
+          'Message could not be sent. Please try again.'
+        );
+      } finally {
+        submitButton.disabled = false;
+        submitButton.style.opacity = '';
+
+        if (buttonText) {
+          buttonText.textContent = 'Send Message';
+        }
+      }
+    });
+  }
+
+  return { init };
+})();
