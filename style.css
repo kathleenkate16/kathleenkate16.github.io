@@ -1343,6 +1343,7 @@ a.contact-value:hover { color: var(--accent); }
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: 0.75rem;
+    align-items: center;
 }
 [data-theme="dark"] .form-success { color: #86EFAC; }
 
